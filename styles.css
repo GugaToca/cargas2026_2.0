@@ -699,3 +699,18 @@ button {
     flex-shrink: 0;
   }
 }
+
+.header-logo {
+  height: 100px;        /* AUMENTE AQUI para deixar maior */
+  max-height: 80px;    /* garante que não estoura o header */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+@media (max-width: 720px) {
+  .header-logo {
+    height: 34px;
+  }
+}
