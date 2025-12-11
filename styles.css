@@ -719,8 +719,8 @@ button {
 
   .app-nav {
     width: calc(100% - 20px); /* garante que nunca estoura a tela */
-    max-width: 100%;
-    margin: 20px auto 0;      /* centraliza */
+    max-width: 90%;
+    margin: 30px auto 0;      /* centraliza */
     box-sizing: border-box;
   }
 
@@ -728,4 +728,5 @@ button {
     overflow: hidden;         /* evita qualquer vazamento lateral */
   }
 }
+
 
