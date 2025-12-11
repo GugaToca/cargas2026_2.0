@@ -28,7 +28,7 @@ const totalVolumesEl = document.getElementById("total-volumes");
 const totalPedidosEl = document.getElementById("total-pedidos");
 const btnExportar = document.getElementById("btn-exportar");
 const btnLimparFiltros = document.getElementById("btn-limpar-filtros");
-const btnLogout = document.getElementById("btn-logout");
+const btnLogout = document.getElementById("logout-header");
 const usuarioNomeEl = document.getElementById("usuario-nome");
 
 // Protege a rota e carrega dados do usuário
