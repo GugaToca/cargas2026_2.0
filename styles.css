@@ -711,6 +711,7 @@ button {
 
 @media (max-width: 720px) {
   .header-logo {
-    height: 34px;
+    height: 54px;
   }
 }
+
