@@ -678,3 +678,24 @@ button {
     margin-top: 10px;
   }
 }
+
+/* ===== AJUSTE DO MENU HAMBURGUER PARA CABER NA TELA ===== */
+@media (max-width: 720px) {
+
+  .app-nav {
+    width: calc(100% - 4px); /* garante que não ultrapasse o container */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  /* Evita que qualquer elemento do header cause quebra */
+  .app-header {
+    overflow: hidden; /* impede estouro lateral */
+  }
+
+  /* Ajusta o botão hambúrguer para não empurrar nada */
+  .mobile-menu-btn {
+    flex-shrink: 0;
+  }
+}
