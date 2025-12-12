@@ -574,7 +574,7 @@ textarea {
 #splash-screen {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, #020617, #01040f);
+  background: radial-gradient(circle at top, #091b6b, #0d1635);
   display: flex;
   align-items: center;
   justify-content: center;
