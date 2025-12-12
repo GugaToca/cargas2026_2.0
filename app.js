@@ -437,3 +437,20 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker registrado"))
     .catch(err => console.error("Erro no SW:", err));
 }
+
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash-screen");
+
+  // Só mostrar splash em modo app (PWA)
+  const isPWA =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  if (splash && isPWA) {
+    setTimeout(() => {
+      splash.classList.add("hide");
+    }, 900);
+  } else if (splash) {
+    splash.remove(); // desktop / navegador normal
+  }
+});

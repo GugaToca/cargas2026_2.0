@@ -566,3 +566,45 @@ textarea {
   padding: 6px 10px;
   border-radius: var(--radius-sm);
 }
+
+/* ==============================
+   SPLASH SCREEN (APP MOBILE)
+================================ */
+
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #020617, #01040f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+#splash-screen img {
+  width: 120px;
+  animation: splashZoom 0.9s ease forwards;
+}
+
+@keyframes splashZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Esconder splash */
+#splash-screen.hide {
+  animation: splashFadeOut 0.4s ease forwards;
+}
+
+@keyframes splashFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
