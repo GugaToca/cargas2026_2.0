@@ -1,4 +1,4 @@
-const CACHE_NAME = "diario-cargas-v4"; // 👈 MUDE A VERSÃO SEMPRE QUE ATUALIZAR
+const CACHE_NAME = "diario-cargas-v5"; // 👈 MUDE A VERSÃO SEMPRE QUE ATUALIZAR
 
 const FILES_TO_CACHE = [
   "./",
