@@ -430,11 +430,11 @@ textarea {
 }
 
 .carga-status.ok {
-  background: rgba(34, 197, 94, 0.15);
+  background: rgba(34, 197, 94, 0.925);
   color: #22c55e;
 }
 
 .carga-status.problema {
-  background: rgba(239, 68, 68, 0.15);
+  background: rgba(239, 68, 68, 0.699);
   color: #ef4444;
 }
