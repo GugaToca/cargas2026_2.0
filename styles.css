@@ -619,28 +619,7 @@ button {
   cursor: pointer;
 }
 
-/* Menu escondido no mobile */
-@media (max-width: 720px) {
-  .app-nav {
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    background: rgba(2, 33, 105, 0.95);
-    border: 1px solid rgba(118, 149, 192, 0.603);
-    border-radius: 14px;
-    padding: 10px;
-    margin-top: 8px;
-    box-shadow: var(--shadow-soft);
-  }
 
-  .app-nav.open {
-    display: flex;
-  }
-
-  .mobile-menu-btn {
-    display: block;
-  }
-}
 
 /* Ajuste para manter tudo alinhado na horizontal */
 .app-header {
@@ -672,11 +651,6 @@ button {
     flex-shrink: 0;
   }
 
-  /* Menu drop-down vem abaixo do header */
-  .app-nav {
-    width: 100%;
-    margin-top: 10px;
-  }
 }
 
 /* ===== AJUSTE DO MENU HAMBURGUER PARA CABER NA TELA ===== */
@@ -722,11 +696,50 @@ button {
   backdrop-filter: blur(12px);
 }
 
-
   .app-header {
     overflow: hidden;         /* evita qualquer vazamento lateral */
   }
 }
 
+/* ===== MENU MOBILE DEFINITIVO ===== */
+@media (max-width: 720px) {
 
+  /* Header nunca quebra */
+  .app-header {
+    flex-wrap: nowrap;
+  }
 
+  /* Botão hamburguer */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Menu mobile */
+  .app-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);   /* logo abaixo do header */
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    gap: 8px;
+
+    background: rgba(2, 33, 105, 0.97);
+    border: 1px solid rgba(118, 149, 192, 0.6);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(16px);
+
+    z-index: 1000;
+  }
+
+  .app-nav.open {
+    display: flex;
+  }
+}
