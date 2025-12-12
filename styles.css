@@ -358,3 +358,83 @@ textarea {
 .auth-footer-text a:hover {
   text-decoration: underline;
 }
+
+/* ==============================
+   CARDS DE CARGAS REGISTRADAS
+================================ */
+
+.carga-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-soft);
+}
+
+.carga-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.carga-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.carga-date {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Meta informações */
+.carga-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  font-size: 14px;
+}
+
+.carga-meta span {
+  color: var(--text-muted);
+}
+
+/* Observações */
+.carga-obs {
+  font-size: 14px;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* Ações */
+.carga-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+/* Situação */
+.carga-status {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.carga-status.ok {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.carga-status.problema {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
