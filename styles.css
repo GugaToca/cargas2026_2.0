@@ -709,6 +709,10 @@ button {
     flex-wrap: nowrap;
   }
 
+  .app-header {
+  position: relative;
+}
+
   /* Botão hamburguer */
   .mobile-menu-btn {
     display: block;
@@ -743,3 +747,4 @@ button {
     display: flex;
   }
 }
+
