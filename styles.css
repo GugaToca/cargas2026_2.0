@@ -438,3 +438,54 @@ textarea {
   background: rgba(239, 68, 68, 0.699);
   color: #ef4444;
 }
+
+/* ==============================
+   AJUSTE DEFINITIVO DOS CARDS
+   (compatível com o HTML atual)
+================================ */
+
+/* Card base (caso venha como .card) */
+.cargas-list > .card,
+.cargas-list > div {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Cabeçalho do card */
+.cargas-list h3,
+.cargas-list h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Texto secundário */
+.cargas-list p,
+.cargas-list span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Botões dentro do card */
+.cargas-list button {
+  border: 1px solid var(--stroke);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Status OK / Problema (funciona por texto) */
+.cargas-list .ok {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.cargas-list .problema {
+  color: #ef4444;
+  font-weight: 600;
+}
