@@ -608,3 +608,15 @@ textarea {
     visibility: hidden;
   }
 }
+
+/* ==============================
+   CONTROLE DE TELAS
+================================ */
+
+.screen {
+  display: none;
+}
+
+.screen-active {
+  display: block;
+}

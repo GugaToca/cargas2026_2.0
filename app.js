@@ -407,20 +407,35 @@ function escapeHtml(str) {
     .replace(/'/g, "&#039;");
 }
 
-// Menu Navigation
+// NAVEGAÇÃO ENTRE TELAS CODIGO ATUALIZADO HOJE
+const screens = document.querySelectorAll(".screen");
+
 document.querySelectorAll(".nav-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("nav-active"));
+
+    // botão ativo
+    document.querySelectorAll(".nav-btn").forEach(b =>
+      b.classList.remove("nav-active")
+    );
     btn.classList.add("nav-active");
 
-    const screen = btn.dataset.screen;
+    // telas
+    const target = btn.dataset.screen;
 
-    // Por enquanto, só temos a tela de cargas
-    if (screen !== "cargas") {
-      alert(`Tela "${screen}" ainda será adicionada 👨‍💻`);
+    screens.forEach(screen => {
+      screen.classList.remove("screen-active");
+    });
+
+    const targetScreen = document.getElementById(`screen-${target}`);
+
+    if (targetScreen) {
+      targetScreen.classList.add("screen-active");
+    } else {
+      alert(`Tela "${target}" ainda será adicionada 👨‍💻`);
     }
   });
 });
+
 
 // MENU MOBILE
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
